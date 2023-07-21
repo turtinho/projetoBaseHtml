@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@300&display=swap');
+
+:root{
+    --cor-primaria:#000000;
+    --cor-secundaria:#FFFFFF;
+    --cor-terciaria:#E61B00;
+    --cor-hover:#272727;
+}
+
+* {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    box-sizing:border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.cabecalho{
+    padding: 5% 0% 0% 15%;
+}
+
+.cabecalho-menu{
+    display: flex;
+    gap:80px;
+}
+
+.cabecalho-menu-link{
+    color: var(--cor-terciaria);
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding:8%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:82px;
+}
+
+.apresentacao-logo{
+    width: 50%;
+    height: 50%;
+}
+
+.apresentacao-conteudo {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.apresentacao-titulo {
+    font-size: 2.25rem;
+    font-family: 'Krona One', sans-serif;
+}
+
+.apresentacao-subtitulo {
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 20px;
+}
+
+.apresentacao-contato {
+    padding-top: 10px;
+    font-size: 0.9375rem;
+    padding-bottom: 20px;
+}
+
+.apresentacao-sobre{
+    font-size: 0.625rem;
+
+}
+
+.foto{
+    height: 400px;
+    width: 400px;
+    margin-left: 25px;
+}
+.paragrafo{
+    font-size: 1.25rem;
+    justify-content: safe;
+}
+
+.apresentacao-botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-self: center;
+}
+
+.apresentacao-botao {
+    display:flex;
+    justify-content: center;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 5px;
+    width: 180px;
+    height: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9375rem;
+    color: var(--cor-secundaria);
+    padding-top: 8px;
+    padding-bottom: 18px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.apresentacao-botao:hover{
+    background-color: var(--cor-hover);
+}
+
+.rodape{
+    color:var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 15px;
+}
+
+/* para verificar condicionalmente o tamanho da tela
+colocamos orientação em coluna, em modo reverse para invernter
+o que está baixo, para cima (como visto na imagem)*/
+@media (max-width:1200px){
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho-menu{
+        justify-content:center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao-conteudo{
+        width: auto;
+    }
+}
